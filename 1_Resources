@@ -1,0 +1,29 @@
++
+Learn BCC
+https://kinvolk.io/blog/2020/04/adding-new-bcc-based-gadgets-in-inspektor-gadget/
+https://blogs.oracle.com/linux/post/intro-to-bcc-1
++
+bpftrace
+https://github.com/iovisor/bpftrace/tree/master/docs
+https://www.youtube.com/results?search_query=bpftrace+tutorial
++
+libbpf
+https://www.containiq.com/post/libbpf
+https://en.pingcap.com/blog/tips-and-tricks-for-writing-linux-bpf-applications-with-libbpf/
+https://github.com/pratyushanand/learn-bpf
+https://www.youtube.com/results?search_query=libbpf
+https://cmd.com/blog/making-bpf-easy-with-libbpf-and-zig/
+https://blog.aquasec.com/libbpf-ebpf-programs
+https://github.com/libbpf/libbpf
+https://www.kernel.org/doc/html/latest/bpf/libbpf/index.html
+https://libbpf.readthedocs.io/en/latest/api.html
+https://www.linkedin.com/pulse/write-your-own-ebpf-tools-libbpf-bootstrap-arnold-van-wijnbergen
+https://blogs.oracle.com/linux/post/bpf-application-development-and-libbpf
+
+
+
+# google .. google .. google...
+-------------------------------
+"learn bcc"
+"learn bpftrace"
+"learn bpflib"
