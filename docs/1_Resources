@@ -16,10 +16,11 @@ https://cmd.com/blog/making-bpf-easy-with-libbpf-and-zig/
 https://blog.aquasec.com/libbpf-ebpf-programs
 https://github.com/libbpf/libbpf
 https://www.kernel.org/doc/html/latest/bpf/libbpf/index.html
-https://libbpf.readthedocs.io/en/latest/api.html
+>>> https://libbpf.readthedocs.io/en/latest/api.html
 https://www.linkedin.com/pulse/write-your-own-ebpf-tools-libbpf-bootstrap-arnold-van-wijnbergen
 https://blogs.oracle.com/linux/post/bpf-application-development-and-libbpf
-
++
+https://github.com/iovisor/bcc/tree/master/libbpf-tools
 
 
 # google .. google .. google...
