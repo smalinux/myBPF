@@ -28,4 +28,6 @@ while 1:
         continue
     except KeyboardInterrupt:
         exit()
-    printb(b"%-18.9f %-16s %-6d %s" % (ts, task, pid, msg))
+    printb(b"%-18.9f %-16s %-6d %s %d" % (ts, task, pid, msg, cpu))
+
+# cpu == core number, 0:11 in my case
