@@ -186,7 +186,7 @@ enum bpf_enum_value_kind {
 #define bpf_core_enum_value(enum_type, enum_value)			    \
 	__builtin_preserve_enum_value(*(typeof(enum_type) *)enum_value, BPF_ENUMVAL_VALUE)
 
-/*
+/* SMA: DONE: Read helper family
  * bpf_core_read() abstracts away bpf_probe_read_kernel() call and captures
  * offset relocation for source address using __builtin_preserve_access_index()
  * built-in, provided by Clang.
@@ -208,7 +208,7 @@ enum bpf_enum_value_kind {
 /* NOTE: see comments for BPF_CORE_READ_USER() about the proper types use. */
 #define bpf_core_read_user(dst, sz, src)				    \
 	bpf_probe_read_user(dst, sz, (const void *)__builtin_preserve_access_index(src))
-/*
+/* SMA: DONE: Read helper family
  * bpf_core_read_str() is a thin wrapper around bpf_probe_read_str()
  * additionally emitting BPF CO-RE field relocation for specified source
  * argument.
@@ -302,7 +302,7 @@ enum bpf_enum_value_kind {
 	___apply(___core_read, ___empty(__VA_ARGS__))(fn, fn_ptr, dst,	    \
 						      src, a, ##__VA_ARGS__)
 
-/*
+/* SMALINUX: DONE: FACEBOOK
  * BPF_CORE_READ_INTO() is a more performance-conscious variant of
  * BPF_CORE_READ(), in which final field is read into user-provided storage.
  * See BPF_CORE_READ() below for more details on general usage.
@@ -338,7 +338,7 @@ enum bpf_enum_value_kind {
 		     dst, (src), a, ##__VA_ARGS__)			    \
 })
 
-/*
+/* SMALINUX: DONE: FACEBOOK
  * BPF_CORE_READ_STR_INTO() does same "pointer chasing" as
  * BPF_CORE_READ() for intermediate pointers, but then executes (and returns
  * corresponding error code) bpf_core_read_str() for final string read.
@@ -375,7 +375,8 @@ enum bpf_enum_value_kind {
 		     dst, (src), a, ##__VA_ARGS__)			    \
 })
 
-/*
+/* SMALINUX: t->mm->exe_file->fpath.dentry->d_name.name;
+ * SMALINUX: DONE: FACEBOOK
  * BPF_CORE_READ() is used to simplify BPF CO-RE relocatable read, especially
  * when there are few pointer chasing steps.
  * E.g., what in non-BPF world (or in BPF w/ BCC) would be something like:

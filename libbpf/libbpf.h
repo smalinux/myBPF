@@ -51,6 +51,7 @@ enum libbpf_errno {
 
 LIBBPF_API int libbpf_strerror(int err, char *buf, size_t size);
 
+// SMALINUX: print & debug
 enum libbpf_print_level {
         LIBBPF_WARN,
         LIBBPF_INFO,

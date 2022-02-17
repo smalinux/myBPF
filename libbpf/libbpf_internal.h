@@ -129,6 +129,7 @@
 
 #endif
 
+// SMALINUX: aka printf
 extern void libbpf_print(enum libbpf_print_level level,
 			 const char *format, ...)
 	__attribute__((format(printf, 2, 3)));
