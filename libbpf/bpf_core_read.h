@@ -58,7 +58,7 @@ enum bpf_enum_value_kind {
 			(const void *)src + __CORE_RELO(src, fld, BYTE_OFFSET))
 #endif
 
-/*
+/* SMALINUX: DONE: FACEBOOK
  * Extract bitfield, identified by s->field, and return its value as u64.
  * All this is done in relocatable manner, so bitfield changes such as
  * signedness, bit size, offset changes, this will be handled automatically.
@@ -78,7 +78,7 @@ enum bpf_enum_value_kind {
 	val;								      \
 })
 
-/*
+/* SMALINUX: DONE: FACEBOOK
  * Extract bitfield, identified by s->field, and return its value as u64.
  * This version of macro is using direct memory reads and should be used from
  * BPF program types that support such functionality (e.g., typed raw
@@ -110,7 +110,7 @@ enum bpf_enum_value_kind {
 	val;								      \
 })
 
-/*
+/* SMALINUX: DONE: FACEBOOK
  * Convenience macro to check that field actually exists in target kernel's.
  * Returns:
  *    1, if matching field is present in target kernel;
@@ -119,7 +119,7 @@ enum bpf_enum_value_kind {
 #define bpf_core_field_exists(field)					    \
 	__builtin_preserve_field_info(field, BPF_FIELD_EXISTS)
 
-/*
+/* SMALINUX: DONE: FACEBOOK
  * Convenience macro to get the byte size of a field. Works for integers,
  * struct/unions, pointers, arrays, and enums.
  */
@@ -144,7 +144,7 @@ enum bpf_enum_value_kind {
 #define bpf_core_type_id_kernel(type)					    \
 	__builtin_btf_type_id(*(typeof(type) *)0, BPF_TYPE_ID_TARGET)
 
-/*
+/* SMALINUX: DONE: FACEBOOK
  * Convenience macro to check that provided named type
  * (struct/union/enum/typedef) exists in a target kernel.
  * Returns:
@@ -154,7 +154,7 @@ enum bpf_enum_value_kind {
 #define bpf_core_type_exists(type)					    \
 	__builtin_preserve_type_info(*(typeof(type) *)0, BPF_TYPE_EXISTS)
 
-/*
+/* SMALINUX: DONE: FACEBOOK
  * Convenience macro to get the byte size of a provided named type
  * (struct/union/enum/typedef) in a target kernel.
  * Returns:
