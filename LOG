@@ -45,8 +45,8 @@ filelife.bpf.c       |
 filelife.c           |
 filelife.h           |
 filetop.bpf.c        | DONE
-filetop.c            |
-filetop.h            |
+filetop.c            | DONE
+filetop.h            | DONE
 fsdist.bpf.c         |
 fsdist.c             |
 fsdist.h             |
@@ -86,9 +86,9 @@ offcputime.h         |
 oomkill.bpf.c        |
 oomkill.c            |
 oomkill.h            |
-opensnoop.bpf.c      |
-opensnoop.c          |
-opensnoop.h          |
+opensnoop.bpf.c      | DONE
+opensnoop.c          | DONE
+opensnoop.h          | DONE
 readahead.bpf.c      |
 readahead.c          |
 readahead.h          |
@@ -132,3 +132,7 @@ uprobe_helpers.h     |
 vfsstat.bpf.c        |
 vfsstat.c            |
 vfsstat.h            |
+
+
+bpf_core_read.h | DONE
+bpf_heper_defs.h | DONE
