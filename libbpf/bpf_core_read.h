@@ -164,7 +164,7 @@ enum bpf_enum_value_kind {
 #define bpf_core_type_size(type)					    \
 	__builtin_preserve_type_info(*(typeof(type) *)0, BPF_TYPE_SIZE)
 
-/*
+/* SMALINUX: DONE: FACEBOOK
  * Convenience macro to check that provided enumerator value is defined in
  * a target kernel.
  * Returns:
@@ -175,7 +175,7 @@ enum bpf_enum_value_kind {
 #define bpf_core_enum_value_exists(enum_type, enum_value)		    \
 	__builtin_preserve_enum_value(*(typeof(enum_type) *)enum_value, BPF_ENUMVAL_EXISTS)
 
-/*
+/* SMALINUX: DONE: FACEBOOK
  * Convenience macro to get the integer value of an enumerator value in
  * a target kernel.
  * Returns:
