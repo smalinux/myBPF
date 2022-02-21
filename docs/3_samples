@@ -7,3 +7,5 @@
 • tools/testing/selftests/bpf/
 
 • libbpf-bootstrap
+
+• linux/tools/testing/selftests/bpf
