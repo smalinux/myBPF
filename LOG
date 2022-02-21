@@ -133,6 +133,71 @@ vfsstat.bpf.c        |
 vfsstat.c            |
 vfsstat.h            |
 
+____________________________________________________________________________________________________
 
 bpf_core_read.h | DONE
-bpf_heper_defs.h | DONE
+bpf_heper_defs.h |
+https://libbpf.readthedocs.io/en/latest/api.html
+https://github.com/iovisor/bpf-docs/blob/master/bpf_helpers.rst
+____________________________________________________________________________________________________
+
+$ tree
+.
+├── libbpf
+│   ├── linux/tools/lib/bpf/libbpf.h  < include in app.c
+│   ├── linux/tools/lib/bpf/bpf.h  < include in app.c
+│   ├── linux/tools/lib/bpf/ANAYTHING.h < include in app.bpf.c
+│   ├── ...
+│   ├── ...
+│   ├── ...
+│   ├── ...
+│   ├── ...
+
+____________________________________________________________________________________________________
+
+
+#### ~/linux/tools/lib/bpf ####
+###############################
+├── bpf_core_read.h | DONE
+├── bpf_endian.h
+├── bpf_gen_internal.h
+├── bpf.h
+├── bpf_helper_defs.h
+├── bpf_helpers.h
+├── bpf_tracing.h
+├── btf.h
+├── hashmap.c
+├── hashmap.h
+├── libbpf_common.h
+├── libbpf.h
+├── libbpf_internal.h
+├── libbpf_legacy.h
+├── nlattr.h
+├── skel_internal.h
+├── str_error.h
+├── strset.h
+└── xsk.h
+
+
+#### ~/linux/include/ ####
+##########################
+├── asm
+│   └── barrier.h
+├── linux
+│   ├── compiler.h
+│   ├── err.h
+│   ├── filter.h
+│   ├── kernel.h
+│   ├── list.h
+│   ├── overflow.h
+│   ├── ring_buffer.h
+│   └── types.h
+└── uapi
+    └── linux
+        ├── bpf_common.h
+        ├── bpf.h <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< I'm work here now!
+        ├── btf.h
+        ├── if_link.h
+        ├── if_xdp.h
+        └── netlink.h
+
