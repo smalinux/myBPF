@@ -1,40 +1,152 @@
-bashreadline.bpf.c   |
-bindsnoop.bpf.c      |
+
+libbpf-tools
+______________________
+bashreadline.bpf.c   | OK, uprobe
+bindsnoop.bpf.c      | snoop
 biolatency.bpf.c     |
 biopattern.bpf.c     |
-biosnoop.bpf.c       |
+biosnoop.bpf.c       | snoop
 biostacks.bpf.c      |
 bitesize.bpf.c       |
 cachestat.bpf.c      |
-cpudist.bpf.c        |
+cpudist.bpf.c        | tp_btf, histogram
 cpufreq.bpf.c        |
-drsnoop.bpf.c        |
-execsnoop.bpf.c      |
-exitsnoop.bpf.c      |
+drsnoop.bpf.c        | snoop
+execsnoop.bpf.c      | snoop
+exitsnoop.bpf.c      | snoop
 filelife.bpf.c       |
-filetop.bpf.c        |
-fsdist.bpf.c         |
+filetop.bpf.c        | kprobe, top,
+fsdist.bpf.c         | kprobe, kretprobe (skip)
 fsslower.bpf.c       |
-funclatency.bpf.c    |
+funclatency.bpf.c    | histogram, dummy_kprobe, dummy_kretprobe
 gethostlatency.bpf.c |
 hardirqs.bpf.c       |
 klockstat.bpf.c      |
-ksnoop.bpf.c         |
+ksnoop.bpf.c         | snoop
 llcstat.bpf.c        |
-mountsnoop.bpf.c     |
+mountsnoop.bpf.c     | snoop
 numamove.bpf.c       |
 offcputime.bpf.c     |
 oomkill.bpf.c        |
-opensnoop.bpf.c      |
-readahead.bpf.c      |
+opensnoop.bpf.c      | tracepoint, snoop
+readahead.bpf.c      | fentry
 runqlat.bpf.c        |
 runqlen.bpf.c        |
 runqslower.bpf.c     |
 softirqs.bpf.c       |
 solisten.bpf.c       |
-statsnoop.bpf.c      |
-syscount.bpf.c       |
-tcpconnect.bpf.c     |
+statsnoop.bpf.c      | tracepoint, snoop
+syscount.bpf.c       | OK,
+tcpconnect.bpf.c     | OK, kprobe
 tcpconnlat.bpf.c     |
 tcprtt.bpf.c         |
-vfsstat.bpf.c        |
+vfsstat.bpf.c        | OK, kprobe, fentry
+______________________
+
+
+
+BCC tools
+___________________
+argdist.py        | -
+bashreadline.py   |
+bindsnoop.py      |
+biolatency.py     |
+biolatpcts.py     | -
+biosnoop.py       |
+biotop.py         | -
+bitesize.py       |
+bpflist.py        | -------------------------- port this first
+btrfsdist.py      | -
+btrfsslower.py    | -
+cachestat.py      |
+cachetop.py       | -
+capable.py        | -
+compactsnoop.py   | -
+cpudist.py        |
+cpuunclaimed.py   | -
+criticalstat.py   | -
+dbslower.py       | -
+dbstat.py         | -
+dcsnoop.py        | -
+dcstat.py         | -
+deadlock.py       | -
+dirtop.py         | -
+drsnoop.py        |
+execsnoop.py      |
+exitsnoop.py      |
+ext4dist.py       | -
+ext4slower.py     | -
+filelife.py       |
+fileslower.py     | -
+filetop.py        |
+funccount.py      | -
+funcinterval.py   | -
+funclatency.py    |
+funcslower.py     | -
+gethostlatency.py |
+hardirqs.py       |
+inject.py         | -
+killsnoop.py      | -
+klockstat.py      |
+kvmexit.py        | -
+llcstat.py        |
+mdflush.py        | -
+memleak.py        | -
+mountsnoop.py     |
+mysqld_qslower.py | -
+netqtop.py        | -
+nfsdist.py        | -
+nfsslower.py      | -
+offcputime.py     |
+offwaketime.py    | -
+oomkill.py        |
+opensnoop.py      |
+pidpersec.py      | -
+profile.py        | -
+readahead.py      |
+runqlat.py        |
+runqlen.py        |
+runqslower.py     |
+shmsnoop.py       | -
+slabratetop.py    | -
+sofdsnoop.py      | -
+softirqs.py       |
+solisten.py       |
+sslsniff.py       | -
+stackcount.py     | -
+statsnoop.py      |
+swapin.py         | -
+syncsnoop.py      | -
+syscount.py       | -
+tcpaccept.py      | -
+tcpconnect.py     |
+tcpconnlat.py     |
+tcpdrop.py        | -
+tcplife.py        | -
+tcpretrans.py     | -
+tcprtt.py         |
+tcpstates.py      | -
+tcpsubnet.py      | -
+tcpsynbl.py       | -
+tcptop.py         | -
+tcptracer.py      | -
+threadsnoop.py    | -
+tplist.py         | -
+trace.py          | -
+ttysnoop.py       | -
+vfscount.py       | -
+vfsstat.py        |
+virtiostat.py     | -
+wakeuptime.py     | -
+xfsdist.py        | -
+xfsslower.py      | -
+zfsdist.py        | -
+zfsslower.py      | -
+___________________
+
+
+
+
+
+Generic BCC helpers:
+- trace_helpers.h
