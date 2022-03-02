@@ -2,13 +2,13 @@
 libbpf-tools
 ______________________
 bashreadline.bpf.c   | OK, uprobe
-bindsnoop.bpf.c      | snoop
+bindsnoop.bpf.c      | snoop, networking
 biolatency.bpf.c     |
 biopattern.bpf.c     |
 biosnoop.bpf.c       | snoop
 biostacks.bpf.c      |
 bitesize.bpf.c       |
-cachestat.bpf.c      |
+cachestat.bpf.c      | nice to study
 cpudist.bpf.c        | tp_btf, histogram
 cpufreq.bpf.c        |
 drsnoop.bpf.c        | snoop
@@ -46,107 +46,194 @@ ______________________
 
 
 BCC tools
-___________________
+_______________________________
+argdist.py                734
 argdist.py        | -
+bashreadline.py           83
 bashreadline.py   |
+bindsnoop.py              503
 bindsnoop.py      |
+biolatency.py             284
 biolatency.py     |
+biolatpcts.py             311
 biolatpcts.py     | -
+biosnoop.py               219
 biosnoop.py       |
+biotop.py                 244
 biotop.py         | -
+bitesize.py               51
 bitesize.py       |
-bpflist.py        | -------------------------- port this first
+bpflist.py                87
+bpflist.py        |
+btrfsdist.py              239
 btrfsdist.py      | -
+btrfsslower.py            349
 btrfsslower.py    | -
+cachestat.py              184
 cachestat.py      |
+cachetop.py               266
 cachetop.py       | -
+capable.py                302
 capable.py        | -
+compactsnoop.py           400
 compactsnoop.py   | -
+cpudist.py                186
 cpudist.py        |
+cpuunclaimed.py           403
 cpuunclaimed.py   | -
+criticalstat.py           323
 criticalstat.py   | -
+dbslower.py               233
 dbslower.py       | -
+dbstat.py                 115
 dbstat.py         | -
-dcsnoop.py        | -
-dcstat.py         | -
+dcsnoop.py                164
+dcsnoop.py        | - regex
+dcstat.py                 139
+dcstat.py         | - regex
+deadlock.py               570
 deadlock.py       | -
+dirtop.py                 267
 dirtop.py         | -
+drsnoop.py                235
 drsnoop.py        |
+execsnoop.py              307
 execsnoop.py      |
+exitsnoop.py              288
 exitsnoop.py      |
+ext4dist.py               236
 ext4dist.py       | -
+ext4slower.py             346
 ext4slower.py     | -
+filelife.py               135
 filelife.py       |
+fileslower.py             246
 fileslower.py     | -
+filetop.py                221
 filetop.py        |
+funccount.py              313
 funccount.py      | -
+funcinterval.py           195
 funcinterval.py   | -
+funclatency.py            413
 funclatency.py    |
+funcslower.py             347
 funcslower.py     | -
+gethostlatency.py         133
 gethostlatency.py |
+hardirqs.py               234
 hardirqs.py       |
+inject.py                 525
 inject.py         | -
+killsnoop.py              152
 killsnoop.py      | -
+klockstat.py              496
 klockstat.py      |
+kvmexit.py                386
 kvmexit.py        | -
+llcstat.py                119
 llcstat.py        |
-mdflush.py        | -
+mdflush.py                73
+mdflush.py        | - useless!
+memleak.py                558
 memleak.py        | -
+mountsnoop.py             475
 mountsnoop.py     |
+mysqld_qslower.py         129
 mysqld_qslower.py | -
+netqtop.py                219
 netqtop.py        | -
+nfsdist.py                183
 nfsdist.py        | -
+nfsslower.py              312
 nfsslower.py      | -
+offcputime.py             363
 offcputime.py     |
+offwaketime.py            425
 offwaketime.py    | -
+oomkill.py                71
 oomkill.py        |
+opensnoop.py              391
 opensnoop.py      |
+pidpersec.py              54
 pidpersec.py      | -
+profile.py                378
 profile.py        | -
+readahead.py              183
 readahead.py      |
+runqlat.py                322
 runqlat.py        |
+runqlen.py                255
 runqlen.py        |
+runqslower.py             289
 runqslower.py     |
+shmsnoop.py               305
 shmsnoop.py       | -
+slabratetop.py            147
 slabratetop.py    | -
+sofdsnoop.py              334
 sofdsnoop.py      | -
+softirqs.py               166
 softirqs.py       |
+solisten.py               202
 solisten.py       |
+sslsniff.py               445
 sslsniff.py       | -
+stackcount.py             385
 stackcount.py     | -
+statsnoop.py              175
 statsnoop.py      |
+swapin.py                 88
 swapin.py         | -
+syncsnoop.py              50
 syncsnoop.py      | -
+syscount.py               231
 syscount.py       | -
+tcpaccept.py              281
 tcpaccept.py      | -
+tcpconnect.py             552
 tcpconnect.py     |
+tcpconnlat.py             288
 tcpconnlat.py     |
+tcpdrop.py                218
 tcpdrop.py        | -
+tcplife.py                500
 tcplife.py        | -
+tcpretrans.py             430
 tcpretrans.py     | -
+tcprtt.py                 267
 tcprtt.py         |
+tcpstates.py              449
 tcpstates.py      | -
+tcpsubnet.py              262
 tcpsubnet.py      | -
+tcpsynbl.py               78
 tcpsynbl.py       | -
+tcptop.py                 324
 tcptop.py         | -
+tcptracer.py              688
 tcptracer.py      | -
+threadsnoop.py            69
 threadsnoop.py    | -
+tplist.py                 105
 tplist.py         | -
+trace.py                  954
 trace.py          | -
+ttysnoop.py               192
 ttysnoop.py       | -
-vfscount.py       | -
+vfscount.py               61
+vfscount.py       | - regex
+vfsstat.py                129
 vfsstat.py        |
+virtiostat.py             289
 virtiostat.py     | -
+wakeuptime.py             272
 wakeuptime.py     | -
+xfsdist.py                177
 xfsdist.py        | -
+xfsslower.py              293
 xfsslower.py      | -
+zfsdist.py                191
 zfsdist.py        | -
+zfsslower.py              305
 zfsslower.py      | -
-___________________
-
-
-
-
-
-Generic BCC helpers:
-- trace_helpers.h

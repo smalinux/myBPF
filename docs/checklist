@@ -1,0 +1,85 @@
+Procedure 2.1. Creating a PMDA
+==============================
+	- Assign Performance Metric Identifiers (PMIDs) for the metrics, along
+	  with names for the metrics in the Performance Metrics Name Space
+	  (PMNS). These concepts will be further expanded in Section 2.3,
+	  “Domains, Metrics, Instances and Labels”
+	- Define the metrics and instances that the PMDA will support.
+	- Determine how to extract the metrics from the target domain.
+	- Exercise and test the PMDA with the purpose-built PMDA debugger; see
+	  the dbpmda(1) man page.
+	- Implement any PMDA-specific callbacks, and PMDA initialization
+	  functions.
+	- Implement the functionality to extract the metric values.
+	- Install and connect the PMDA to a running PMCD process; see the
+	  pmcd(1) man page.
+	- Select an appropriate architecture for the PMDA (daemon or DSO, IPC,
+	  pthreads or single threaded).
+	- Specify the help file and control data structures for metrics and
+	  instances that are required by the standard PMDA implementation
+	  library functions.
+	- Where appropriate, define pmie rule templates suitable for alerting or
+	  notification systems. For more information, see the pmie(1) and
+	  pmieconf(1) man pages.
+	- Where appropriate, define pmlogger configuration templates suitable
+	  for creating PCP archives containing the new metrics. For more
+		  information, see the pmlogconf(1) and pmlogger(1) man pages.
+	- Write code to supply the metrics and associated information to PMCD.
+
+
+For a daemon PMDA, the following request PDUs must be supported:
+================================================================
+PDU_DESC_REQ
+PDU_FETCH
+PDU_INSTANCE_REQ
+PDU_PROFILE
+PDU_RESULT
+PDU_TEXT_REQ
+-
+pmAddProfile(3)
+pmGetInDom(3)
+pmLookupDesc(3)
+pmLookupText(3)
+pmStore(3)
+
+
+The following request PDUs may optionally be supported:
+=======================================================
+PDU_ATTR
+PDU_LABEL_REQ
+PDU_PMNS_CHILD
+PDU_PMNS_IDS
+PDU_PMNS_NAMES
+PDU_PMNS_TRAVERSE
+-
+pmLookupName(3)
+pmGetChildren(3)
+pmTraversePMNS(3)
+pmNameID(3)
+__pmParseHostAttrsSpec(3)
+
+
+
+Domains --->> Kernel
+Metrics --->> proc
+instances --->>
+	samples:   all
+
+		sec         min        hour
+		 41          44           1
+		 42          44           1
+		 43          44           1
+		 44          44           1
+
+
+
+
+
+
+
+
+
+
+
+
+
