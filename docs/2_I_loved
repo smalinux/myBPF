@@ -4,3 +4,8 @@
 firewall example
 - Most simple BPF Makefile you will see ever! https://github.com/masmullin2000/libbpf-sample/blob/main/c/simple/Makefile
 - https://www.youtube.com/watch?v=-IGReOYExqo - very nice talk!
+- linux observability with bpf [book]
+-
+-
+-
+-
